@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="sth-header">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `sth-header`
+     * The header of shareToHelp
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class SthHeader extends Polymer.Element {
+      static get is() { return 'sth-header'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'sth-header'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(SthHeader.is, SthHeader);
+  </script>
+</dom-module>
